@@ -8,7 +8,9 @@ import {
   signInWithPopup,
   signInWithRedirect,
   setPersistence,
-  browserSessionPersistence
+  browserSessionPersistence,
+  signOut,
+  onAuthStateChanged
 } from "firebase/auth";
 import {
   getFirestore, doc, setDoc,
@@ -72,5 +74,7 @@ export const createAuthUserWithEmailAndPassword = async (email, password) => {
 export const signInUserWithEmailandPassword = async (email, password) => {
   return await signInWithEmailAndPassword(auth, email, password);
 };
+export const signOutUser = async () => await signOut(auth);
+export const onAuthStateChangedListener = (callback) => onAuthStateChanged(auth, callback);
 //export {auth,signInWithFacebookPopUp,firebaseApp,db,createUserDocumentFromAuth,signInWithGoogleRedirect};
 //export const signInWithFacebookPopUp =  signInWithPopup(auth, facebookProvider);

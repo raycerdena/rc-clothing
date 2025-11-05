@@ -1,21 +1,19 @@
-*{
+* {
   box-sizing: border-box;
 }
 body {
   margin: 0;
-  font-family: 'Oswald',
-    sans-serif;
+  padding: 20px 40px;
+  font-family: "Oswald", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-} 
-
-code {
-  font-family:'Oswald'
 }
 
-a{
+code {
+  font-family: "Oswald";
+}
+
+a {
   text-decoration: none;
   color: black;
-
-  
 }
